@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=1.0">
+    <title>地图标注</title>
+    <script src="./js/jquery-3.4.1.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=ae09d2d135b2f75db82633a1d31c462d"></script>
+</head>
+
+<body>
+    <div id="QueryBar">
+        <input list="userlist" name="imsi" id="imsi" placeholder="请选择用户">
+        <datalist id="userlist">
+            <option>460000095007329090</option>
+            <option>460000095074423059</option>
+            <option>460000095074424637</option>
+            <option>460000095074476402</option>
+            <option>460000095084486097</option>
+            <option>460000095057074060</option>
+            <option>460000095005561145</option>
+            <option>460000095007687263</option>
+            <option>460000095090191628</option>
+            <option>460000095062189004</option>
+            <option>460000095084995924</option>
+            <option>460000095064919090</option>
+            <option>460020095044852955</option>
+            <option>460020095020693878</option>
+            <option>460020095026670626</option>
+            <option>460020095040749610</option>
+            <option>460020095050670159</option>
+            <option>460020095047591881</option>
+            <option>460020095025808757</option>
+            <option>460020095003040400</option>
+            <option>460020095024525542</option>
+            <option>460020095025511997</option>
+            <option>460020095000586650</option>
+            <option>460020095088859075</option>
+            <option>460020095004751842</option>
+            <option>460070095005469544</option>
+            <option>460070095024575626</option>
+            <option>460070095024644511</option>
+            <option>460000095093417729</option>
+            <option>460000095083457844</option>
+            <option>460000095083402469</option>
+            <option>460000095083499334</option>
+            <option>460000095084416880</option>
+            <option>460000095084492531</option>
+            <option>460000095091180583</option>
+            <option>460000095080958864</option>
+            <option>460000095005571676</option>
+            <option>460000095009768355</option>
+            <option>460000095079109575</option>
+            <option>460000095060523239</option>
+            <option>460000095090129828</option>
+            <option>460000095093938695</option>
+            <option>460000095063881983</option>
+            <option>460020095025588848</option>
+            <option>460020095000526731</option>
+            <option>460020095001645387</option>
+            <option>460020095019361156</option>
+            <option>460020095098336977</option>
+            <option>460020095009127182</option>
+            <option>460020095053216865</option>
+            <option>460020095040671966</option>
+            <option>460020095001775162</option>
+            <option>460020095002693054</option>
+            <option>460020095002752094</option>
+            <option>460020095002765063</option>
+            <option>460020095000636300</option>
+            <option>460020095020826206</option>
+            <option>460070095021168998</option>
+            <option>460000095074467156</option>
+            <option>460000095083470449</option>
+            <option>460000095084494779</option>
+            <option>460000095084420542</option>
+            <option>460000095080968055</option>
+            <option>460000095009824436</option>
+            <option>460000095018240151</option>
+            <option>460000095071779102</option>
+            <option>460000095040541608</option>
+            <option>460000095090758498</option>
+            <option>460000095073912558</option>
+            <option>460020095081880808</option>
+            <option>460020095027690570</option>
+            <option>460020095003693826</option>
+            <option>460020095006349317</option>
+            <option>460020095040371174</option>
+            <option>460020095019213379</option>
+            <option>460020095068332375</option>
+            <option>460020095004258157</option>
+            <option>460020095098364762</option>
+            <option>460020095002685457</option>
+            <option>460020095009713959</option>
+            <option>460020095029764850</option>
+            <option>460070095048036852</option>
+            <option>460070095040136238</option>
+            <option>460070095040239953</option>
+            <option>460070095098504016</option>
+            <option>460070095098545714</option>
+            <option>460070095006117569</option>
+            <option>460070095024650259</option>
+            <option>460070095025648611</option>
+            <option>460070095025649502</option>
+            <option>460000095084437788</option>
+            <option>460000095074465569</option>
+            <option>460000095080923032</option>
+            <option>460000095005565778</option>
+            <option>460000095028482910</option>
+            <option>460000095040591270</option>
+            <option>460000095062225863</option>
+            <option>460000095063979850</option>
+            <option>460000095064990351</option>
+            <option>460000095083818745</option>
+            <option>460000095063856923</option>
+            <option>460020095040329737</option>
+            <option>460020095025609903</option>
+            <option>460020095025669655</option>
+            <option>460020095051970226</option>
+            <option>460020095021709464</option>
+            <option>460020095033733585</option>
+            <option>460020095042630820</option>
+            <option>460020095001192336</option>
+            <option>460020095024652194</option>
+            <option>460020095004730821</option>
+            <option>460020095013629082</option>
+            <option>460020095098800085</option>
+            <option>460020095000646396</option>
+        </datalist>
+        <button id="ControlTimeBlock" class="btn btn-default">时间戳</button>
+    </div>
+    <div id="container"></div>
+</body>
+
+</html>
