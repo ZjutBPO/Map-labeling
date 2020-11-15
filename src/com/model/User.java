@@ -5,6 +5,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 import java.util.ArrayList;
 
 public class User {
+    //添加注解，指定json串中key的名称
     @JSONField(name = "path")
     private ArrayList<Coordinate> path;
     @JSONField(name = "imsi")

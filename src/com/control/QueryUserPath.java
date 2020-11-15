@@ -17,14 +17,12 @@ import java.io.PrintWriter;
 public class QueryUserPath extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
-//        response.setContentType("text/html;charset=UTF-8");
         response.setCharacterEncoding("UTF-8");
         PrintWriter out = response.getWriter();
         String imsi = request.getParameter("imsi");
-//        System.out.println(imsi);
         UserDao dao = new UserDao();
         User user = dao.QueryUserByImsi(imsi);
-//        System.out.println(JSON.toJSONString(user));
+        //使用fastjson的方法将对象转换成json字符串
         out.print(JSON.toJSONString(user));
     }
 

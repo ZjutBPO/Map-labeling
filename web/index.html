@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,10 +10,12 @@
     <script src="js/index.js"></script>
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/index.css">
+    <!--高德API，最好自己申请新的API使用，-->
     <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=ae09d2d135b2f75db82633a1d31c462d"></script>
 </head>
 
 <body>
+    <!--用户选择框-->
     <div id="QueryBar">
         <input list="userlist" name="imsi" id="imsi" placeholder="请选择用户">
         <datalist id="userlist">
@@ -134,6 +136,7 @@
         </datalist>
         <button id="ControlTimeBlock" class="btn btn-default">时间戳</button>
     </div>
+    <!--地图渲染div-->
     <div id="container"></div>
 </body>
 
