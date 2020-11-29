@@ -1,9 +1,10 @@
 function Mark(imsi) {
     //jquery封装的ajax请求后端
     $.ajax({
+        async:false,
         type: "post",
         data: "imsi=" + imsi,
-        url: "QueryUserPath.do",
+        url: "http://localhost:8080/QueryUserPath.do",
         dataType: "json",   //设置返回的数据类型为json
         success: function(result) {
             //后端查询数据时按照时间从小到大排序
@@ -19,7 +20,6 @@ function Mark(imsi) {
             var clickHandler = function(e) {
                 alert('您在[ ' + e.lnglat.getLng() + ',' + e.lnglat.getLat() + ' ]的位置点击了地图！');
             };
-
             // 绑定事件
             map.on('rightclick', clickHandler);
 
@@ -78,7 +78,9 @@ $(document).ready(function() {
 
     //是否显示时间戳
     $("#ControlTimeBlock").click(function() {
-        if ($(".TimeBlock").css("display") == "none") $(".TimeBlock").css("display", "block");
-        else $(".TimeBlock").css("display", "none");
+        if ($(".TimeBlock").css("display") == "none")
+            $(".TimeBlock").css("display", "block");
+        else
+            $(".TimeBlock").css("display", "none");
     })
 })
