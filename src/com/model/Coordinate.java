@@ -5,10 +5,13 @@ import com.alibaba.fastjson.annotation.JSONField;
 
 public class Coordinate {
     //添加注解，指定json串中key的名称
+    //纬度数据
     @JSONField(name = "latitude")
     private float Latitude;
+    //精度数据
     @JSONField(name = "longitude")
     private float Longitude;
+    //时间数据
     @JSONField(name = "time")
     private String Time;
 
